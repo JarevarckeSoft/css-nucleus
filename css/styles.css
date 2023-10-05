@@ -1,0 +1,461 @@
+:root {
+  --primario: #6834a6;
+  --blanco: #fff;
+  --negro: #000000;
+  --fuentePrincipal: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: var(--fuentePrincipal);
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  margin: 2rem 0;
+}
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+@media (min-width: 240px) {
+  h2 {
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 320px) {
+  h2 {
+    font-size: 3.8rem;
+  }
+}
+@media (min-width: 360px) {
+  h2 {
+    font-size: 4.3rem;
+  }
+}
+@media (min-width: 375px) {
+  h2 {
+    font-size: 4.6rem;
+  }
+}
+h3 {
+  font-size: 3rem;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+/* La siguiente definición aplica los estilos a todas las clases definidas en el html que terminen con __contenedor */
+[class$="__contenedor"] {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 90%;
+}
+[class$="__heading"] {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+/** header **/
+.header {
+  background-image: url(../img/header_bg.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 10rem;
+  padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .header {
+    background-size: 55rem;
+  }
+}
+@media (min-width: 992px) {
+  .header {
+    background-size: 60rem;
+  }
+}
+@media (min-width: 1280px) {
+  .header {
+    background-size: 80rem;
+  }
+}
+@media (min-width: 1820px) {
+  .header {
+    background-size: 100rem;
+  }
+}
+@media (min-width: 2100px) {
+  .header {
+    background-size: 120rem;
+  }
+}
+@media (min-width: 2500px) {
+  .header {
+    background-size: 150rem;
+  }
+}
+@media (min-width: 3000px) {
+  .header {
+    background-size: 180rem;
+  }
+}
+@media (min-width: 768px) {
+  .header__barra {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.header__logo {
+  width: 15rem;
+  margin: 0 auto 3rem auto;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    margin: 0;
+  }
+  .header__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: center;
+  }
+}
+.header__heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .header__heading {
+    font-size: 5rem;
+    text-align: left;
+    line-height: 1.2;
+  }
+}
+.header__texto {
+  margin: 5rem 0;
+}
+@media (min-width: 768px) {
+  .header__imagen {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}
+.header__boton {
+  background-color: var(--primario);
+  color: var(--blanco);
+  display: block;
+  text-align: center;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .header__boton {
+    display: inline-block;
+    padding: 1rem 3rem;
+  }
+}
+.navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .navegacion {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .navegacion {
+    gap: 2rem;
+  }
+}
+.navegacion a {
+  padding: 0 1rem;
+  border-radius: 5rem;
+  transition: all 0.3s;
+}
+.navegacion__link {
+  color: var(--primario);
+}
+@media (min-width: 768px) {
+  .navegacion__link {
+    color: var(--blanco);
+  }
+}
+.navegacion__link:hover {
+  color: var(--blanco);
+  background-color: var(--primario);
+}
+@media (min-width: 768px) {
+  .navegacion__link:hover {
+    color: var(--primario);
+    background-color: var(--blanco);
+  }
+}
+.navegacion__link--blanco {
+  color: var(--blanco);
+}
+.navegacion__link--blanco:hover {
+    color: var(--primario);
+    background-color: var(--blanco);
+}
+
+/** main **/
+.nucleus {
+  margin-top: 3rem;
+}
+.nucleus__grid {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  .nucleus__grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5rem;
+    align-items: center;
+  }
+}
+.listado__elemento {
+  background-color: var(--blanco);
+  box-shadow: 0rem 0rem 1.5rem 0.3rem rgb(0 0 0 / 0.15);
+  padding: 2rem;
+  margin-bottom: 5rem;
+  transition: transform 0.3s;
+}
+.listado__elemento:hover {
+  transform: scale(1.1);
+}
+/*@media (min-width: 768px) {
+    .listado__elemento:last-of-type {
+        margin-bottom: 0;
+    } 
+}*/
+@media (min-width: 768px) {
+  .listado__elemento--2col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+.listado__heading {
+  font-size: 1.7rem;
+  color: var(--primario);
+  margin: 0;
+}
+@media (min-width: 240px) {
+  .listado__heading {
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 320px) {
+  .listado__heading {
+    font-size: 3rem;
+  }
+}
+.listado__numero {
+  color: var(--primario);
+  font-size: 5rem;
+  margin: 0;
+  font-weight: 900;
+  text-align: center;
+}
+@media (min-width: 240px) {
+  .listado__numero {
+    font-size: 6rem;
+  }
+}
+@media (min-width: 768px) {
+  .listado__numero {
+    flex-basis: 20rem;
+    text-align: right;
+    font-size: 4rem;
+  }
+}
+.listado__texto {
+  margin: 0;
+  font-size: 1.5rem;
+}
+@media (min-width: 240px) {
+  .listado__texto {
+    font-size: 2rem;
+  }
+}
+
+/** seguridad **/
+.seguridad {
+  background-color: var(--primario);
+  padding: 20rem 0;
+  position: relative;
+  margin: 10rem 0;
+  overflow: hidden;
+}
+.seguridad::before,
+.seguridad::after {
+  background-color: var(--blanco);
+  content: "";
+  height: 20rem;
+  width: 120%;
+  position: absolute;
+}
+.seguridad::before {
+  top: -10rem;
+  left: 0;
+  transform: rotate(3deg);
+}
+.seguridad::after {
+  bottom: -10rem;
+  left: -1rem;
+  transform: rotate(-3deg);
+}
+@media (min-width: 320px) {
+  .seguridad::after {
+    left: -5rem;
+  }
+}
+.seguridad__heading {
+  color: var(--blanco);
+}
+@media (min-width: 768px) {
+  .seguridad__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    align-items: center;
+  }
+}
+
+/** comisiones **/
+@media (min-width: 768px) {
+  .comisiones__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    align-items: flex-end;
+  }
+}
+@media (min-width: 1024px) {
+  .comisiones__grid {
+    align-items: center;
+  }
+}
+.comisiones__texto {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+@media (min-width: 240px) {
+  .comisiones__texto {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 768px) {
+  .comisiones__texto {
+    text-align: left;
+  }
+}
+
+/** testimoniales **/
+.testimoniales {
+  background-color: var(--primario);
+  padding: 5rem 0;
+}
+.testimoniales__heading {
+  color: var(--blanco);
+}
+.testimoniales__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+@media (min-width: 768px) {
+  .testimoniales__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.testimonial {
+  background-color: var(--blanco);
+  box-shadow: 0rem 0rem 1.5rem 0.3rem rgb(0 0 0 / 0.15);
+  padding: 2rem;
+  position: relative;
+}
+.testimonial__texto {
+  padding-left: 4rem;
+}
+.testimonial__texto::before {
+  content: "";
+  background-image: url(../img/comilla.png);
+  background-size: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 3.5rem;
+  left: 2rem;
+}
+.testimonial__autor {
+  text-align: right;
+  color: var(--primario);
+  font-weight: 700;
+}
+
+/** footer **/
+.footer {
+  background-color: #5a30a0;
+  padding: 3rem 0 0 0;
+}
+@media (min-width: 768px) {
+  .footer__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.footer__logo {
+  width: 15rem;
+  margin: 0 auto 4rem auto;
+}
+@media (min-width: 240px) {
+  .footer__logo {
+    width: 20rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    margin: 0;
+  }
+}
+.copyright {
+  margin-top: 3rem;
+  color: #8463ac;
+  background-color: rgb(0 0 0 / 0.15);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+@media (min-width: 540px) {
+    .copyright {
+      font-size: 1.5rem;
+    }
+}
+.copyright p {
+  margin: 0;  
+}
